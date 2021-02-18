@@ -1,0 +1,59 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#topMenu {
+    position: absolute;
+    background: linear-gradient(180deg, #000000 0%, rgba(9, 9, 9, 0.962939) 0.01%, rgba(35, 35, 35, 0.864583) 43.75%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    top: 0px;
+}
+
+#homeImage {
+    width: 100%;
+}
+
+#loginButton {
+    border: none;
+    position: absolute;
+    top: 26px;
+    right: 80px;
+    color: white;
+    background-color: inherit;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+#profileImage {
+    border: none;
+    border-radius: 40px;
+    position: absolute;
+    top: 24px;
+    right: 36px;
+    height: 40px;
+    width: 40px;
+    background-color: #EEE5E5;
+}
+
+#topMenuList {
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+#topMenuList li {
+    display: inline;
+    color: white;
+    background-color: inherit;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.topMenuItem:hover {
+    background-color: blue;
+}

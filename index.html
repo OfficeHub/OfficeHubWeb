@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css" type="text/css">
-    </head>
-    <body>
-      <header>
-        <h1><a id="logo" style="position:absolute" href ="OHUB.com" > OHUB </a><h1>
-      </header>
-      <nav>
-        <ul>
-          <li><a href = "dummy_e-mail.com" > e-mail </a></li>
-          <li><a href = "dummy_coference.com" > 회의실 예약 </a></li>
-          <li><a href = "dummy_dailyAttendance.com" > 출근 현황 </a></li>
-          <li><a href = "dummy_Leadership.com " > 조직도 </a></li>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta property="og:title" content="야 너두 코딩 할 수 있어">
+    <meta property="og:description" content="코딩을 처음하는 사람들이 웹사이트를 만들어봅니다. firebase hosting을 사용했습니다.">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a id="logo" style="position:absolute" href="OHUB.com"> OHUB </a>
+        </h1>
+    </header>
+
+    <img id="homeImage" src="https://picsum.photos/1000/400" alt="main image">
+
+    <div id="topMenu">
+        <ul id="topMenuList">
+            <li class="topMenuItem">
+                공지사항
+            </li>
+            <li class="topMenuItem">
+                안 읽은 메일
+            </li>
         </ul>
-      </nav>
-    </body>
+        <button id="loginButton">
+            로그인하세요
+        </button>
+        <button id="profileImage" />
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="dummy_e-mail.com"> e-mail </a></li>
+            <li><a href="dummy_coference.com"> 회의실 예약 </a></li>
+            <li><a href="dummy_dailyAttendance.com"> 출근 현황 </a></li>
+            <li><a href="dummy_Leadership.com "> 조직도 </a></li>
+        </ul>
+    </nav>
+</body>
+
 </html>
