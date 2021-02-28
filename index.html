@@ -9,6 +9,7 @@
     <meta property="og:description" content="코딩을 처음하는 사람들이 웹사이트를 만들어봅니다. firebase hosting을 사용했습니다.">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -17,15 +18,14 @@
             <a id="logo" style="position:absolute" href="OHUB.com"> OHUB </a>
         </h1>
     </header>
-
     <img id="homeImage" src="https://picsum.photos/1000/400" alt="main image">
 
     <div id="topMenu">
         <ul id="topMenuList">
-            <li class="topMenuItem">
+            <li class="topMenuItem" onclick="showNoticePage()">
                 공지사항
             </li>
-            <li class="topMenuItem">
+            <li class="topMenuItem" onclick="showUnreadMailsPage()">
                 안 읽은 메일
             </li>
         </ul>
@@ -53,6 +53,10 @@
             <li><a href="dummy_Leadership.com "> 조직도 </a></li>
         </ul>
     </nav>
+
+    <div id="contentContainer">
+
+    </div>
 </body>
 
 </html>
