@@ -57,3 +57,41 @@ body {
 .topMenuItem:hover {
     background-color: blue;
 }
+#dropdown {
+    display:inline-block;
+}
+
+#profileImage_content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    z-index: 1;
+}
+#profileImage_content li {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    background-color: #f1f1f1;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#profileImage_content li:hover {
+    background-color: #ddd;
+}
+
+#dropdown:hover #profileImage_content {
+    display:block;
+}
+
+#dropdown:hover #profileImage {
+    background-color: #3e8e41;
+}
+
+
