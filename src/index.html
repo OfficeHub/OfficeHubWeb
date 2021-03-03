@@ -34,7 +34,7 @@
         </button>
 
         <div id="dropdown">
-            <button id="profileImage" onclick="openFunction()">
+            <button id="profileImage" onclick="toggleProfileImage()">
                 <ul id="profileImage_content" class="dropdown_content">
                     <li>김경오 사원</li>
                     <li>마이페이지</li>
@@ -43,25 +43,7 @@
             </button>
         </div>
 
-
     </div>
-    <script>
-        function openFunction() {
-            document.getElementById("profileImage_content").classList.toggle("show");
-        }
-        window.onclick = function (event) {
-            if (!event.target.matches('#profileImage')) {
-                var dropdowns = document.getElementsByClassName("dropdown_content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-
 
     <nav>
         <ul id="sidebar">

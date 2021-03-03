@@ -11,3 +11,17 @@ function showUnreadMailsPage() {
 document.addEventListener("DOMContentLoaded", function () {
     showNoticePage();
 });
+
+
+var showClassName = "show";
+function toggleProfileImage() {
+    document.getElementById("profileImage_content").classList.toggle(showClassName);
+}
+window.onclick = event => {
+    if (!event.target.matches('#profileImage')) {
+        var dropdowns = document.getElementsByClassName("dropdown_content");
+        Array.from(dropdowns).forEach(dropdown => {
+            dropdown.classList.remove(showClassName);
+        });
+    }
+}
