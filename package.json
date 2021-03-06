@@ -1,0 +1,23 @@
+{
+  "name": "officehubweb",
+  "version": "1.0.0",
+  "description": "demo webapp for office",
+  "main": "src/index.html",
+  "dependencies": {
+    "jslint": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfficeHub/OfficeHubWeb.git"
+  },
+  "author": "officehub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OfficeHub/OfficeHubWeb/issues"
+  },
+  "homepage": "https://github.com/OfficeHub/OfficeHubWeb#readme"
+}
