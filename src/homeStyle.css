@@ -54,7 +54,7 @@ body {
 
 #topMenuList {
     position: relative;
-    left: 100px;
+    left: 200px;
     top: 10px;
 }
 
@@ -71,6 +71,7 @@ body {
 .topMenuItem:hover {
     background-color: blue;
 }
+
 #dropdown {
     display:inline-block;
 }
@@ -109,4 +110,44 @@ body {
     background-color: #3e8e41;
 }
 
+#logo {
+    color: white;
+    text-decoration: none;
+    margin:20px;
+    font-size:30px;
+    padding-top:10px;
+    padding-left: 25px;
+}
+  
+#sidebar {
+    position:fixed;
+    list-style-type: none;
+    margin:0px;
+    top:0;     
+    width: 200px;   
+    height: 100%;
+    background: #3962ad;
+    padding: 0px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    opacity:0.9;
+}
+  
+#sidebar li {
+    display: inline;
+    color: white;
+    margin:20px;
+    font-size: 25px;
+    list-style-type: none;
+}
+  
+#sidebar li a{
+    display:block;
+    color: white;
+    text-decoration: none;
+    padding: 6px 8px 6px 25px;
+}
 
+#sidebar li a:hover{
+    color: rgb(8, 70, 112);
+}
