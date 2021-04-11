@@ -1,0 +1,92 @@
+#userName {
+    color: black;
+    font-size: 32px;
+    font-family: Roboto;
+}
+
+#userDescription {
+    color: #c4c4c4;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+#contractInfo {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+#departmentLabel {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto;
+    padding-right: 24px;
+}
+
+#departmentName {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+#phoneNumberLabel {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 24px;
+    font-family: Roboto;
+}
+
+#phoneNumber {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+#editProfileButton {
+    background: none;
+    border-color: #000000;
+    font-size: 24px;
+    border-radius: 8px;
+    margin: 15px auto;
+    display: block;
+    padding: 11px;
+}
+
+#logoutButton {
+    background: none;
+    border-color: #000000;
+    font-size: 24px;
+    border-radius: 8px;
+    display: block;
+    margin: 15px auto;
+    padding: 11px;
+}
+
+#userProfilePage {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#departmentInfo #departmentLabel {
+    display: inline;
+}
+
+#departmentInfo #departmentName {
+    display: inline;
+}
+
+#contactInfo #phoneNumberLabel {
+    display: inline;
+}
+
+#contactInfo #phoneNumber {
+    display: inline;
+}
