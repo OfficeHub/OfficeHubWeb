@@ -1,4 +1,4 @@
-const repository = require('./user_data_repository');
+const repository = require('./user_data_repository.js');
 
 
 test('query uesr', () => {

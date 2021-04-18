@@ -1,4 +1,4 @@
-import {fetchUserData} from "./repository/user_data_repository";
+import {fetchUserData} from "./repository/user_data_repository.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     fetchUserData().then((user) => {
