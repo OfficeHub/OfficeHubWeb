@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: user/app:latest
+          tags: wlals822/office-hub-web:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
