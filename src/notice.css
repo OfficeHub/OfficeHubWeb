@@ -1,0 +1,70 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+h2 {
+	margin-left: 30px;
+}
+
+.container {
+	margin: 20px;
+	height: 80px;
+	border: 3px solid white;
+	border-radius: 20px;
+	background: #66ffe0;
+	cursor: pointer;
+}
+
+.lili {
+	list-style: none;
+	width: 300px;
+	margin-right: 0;
+	float: left;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	width: 300px;
+}
+
+.date {
+	color: #d9d9d9;
+}
+
+.check {
+	margin-top: 20px;
+	margin-right: 20px;
+	float: right;
+	padding: 10px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 300px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
