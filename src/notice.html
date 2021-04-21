@@ -2,12 +2,38 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link rel="stylesheet" href="notice.css" type="text/css">
 </head>
+<script type="text/javascript">
+	$(function () {
+		var s = "";
+		$.ajax({
+			type: "get",
+			url: "d.json",
+			success: function (data) {
+				$.each(data, function (i, elt) {
+					s += "<div class='container'>";
+					s += "<span class='check'>미확인</span>";
+					s += "<ul class='lili'>";
+					s += "<li class='title'>" + elt.title + "</li>";
+					s += "<li class='date'>" + elt.day + "</li>";
+					s += "</ul></div>";
+				});
+				$("#show").html(s);
+
+				$(".container").on("click", function () {
+					$(this).css("background", "gray");
+					$(this).find(".check").text("확인");
+				});
+			}
+		});
+	});
+</script>
 
 <body>
-    <p>공지사항</p>
-    <p>공지사항 목록을 조회 할 수 없습니다. </p>
+	<div id="show"></div>
 </body>
 
 </html>
