@@ -1,19 +1,25 @@
-function showNoticePage() {
-    document.getElementById("contentContainer").innerHTML = '<object type="text/html" data="notice.html"></object>';
-}
-
-function showUnreadMailsPage() {
-    document.getElementById("contentContainer").innerHTML = '<object type="text/html" data="unread_mails.html"></object>';
-}
-
-function showUserProfilePage() {
-    document.getElementById("contentContainer").innerHTML = '<object id="userProfileHtml" type="text/html" data="user_profile.html"></object>';
-}
-
-// 맨 처음 로딩시에는 공지사항 화면을 표시해야하는데, 해당 div는 처음의 html이 모두 로딩되었어야 조회 가능
 document.addEventListener("DOMContentLoaded", function() {
     showNoticePage();
 });
+
+function showNoticePage() {
+    findContentContainer().innerHTML =
+        `<object type="text/html" data="notice.html"></object>`;
+}
+
+function showUnreadMailsPage() {
+    findContentContainer().innerHTML =
+        '<object type="text/html" data="unread_mails.html"></object>';
+}
+
+function showUserProfilePage() {
+    findContentContainer().innerHTML =
+        '<object id="userProfileHtml" type="text/html" data="user_profile.html"></object>';
+}
+
+function findContentContainer() {
+    return document.getElementById("contentContainer");
+}
 
 
 var showClassName = "show";
