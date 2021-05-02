@@ -1,5 +1,5 @@
 function showNoticePage() {
-    document.getElementById("contentContainer").innerHTML = '<object type="text/html" data="notice.html"></object>';
+    document.getElementById("contentContainer").innerHTML = '<object type="text/html" data="notice.html" style="width:700px; height:900px;"></object>';
 }
 
 function showUnreadMailsPage() {
@@ -11,7 +11,7 @@ function showUserProfilePage() {
 }
 
 // 맨 처음 로딩시에는 공지사항 화면을 표시해야하는데, 해당 div는 처음의 html이 모두 로딩되었어야 조회 가능
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     showNoticePage();
 });
 
