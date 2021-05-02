@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     showNoticePage();
+
+    document.getElementById("loginButton").onclick = function (ev) {
+        console.log("login clicked");
+        showLoginModal();
+    };
 });
 
 function showNoticePage() {
@@ -15,6 +20,30 @@ function showUnreadMailsPage() {
 function showUserProfilePage() {
     findContentContainer().innerHTML =
         '<object id="userProfileHtml" type="text/html" data="user_profile.html"></object>';
+}
+
+function showLoginModal() {
+    let loginModal = document.getElementById("loginModal");
+    let closeButton = document.getElementById("cancelLoginButton");
+    let loginButton = document.getElementById("requestLoginButton");
+
+    loginModal.removeEventListener("animationend", () => {}, false);
+    loginModal.style.display = "block";
+    loginModal.addEventListener("animationend", _ => {
+        loginModal.style.display = "block";
+    }, false);
+    loginModal.className = "loginFadeIn";
+
+    loginButton.onclick = function () {
+        alert("로그인 기능 구현이 필요합니다.");ㅓㅓㅓ
+    }
+
+    closeButton.onclick = function () {
+        loginModal.addEventListener("animationend", _ => {
+            loginModal.style.display = "none";
+        }, false);
+        loginModal.className = "loginFadeOut";
+    }
 }
 
 function findContentContainer() {

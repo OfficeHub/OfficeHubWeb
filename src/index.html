@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="homeStyle.css">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="homeStyle.css">
     <meta property="og:title" content="야 너두 코딩 할 수 있어">
     <meta property="og:description" content="코딩을 처음하는 사람들이 웹사이트를 만들어봅니다. firebase hosting을 사용했습니다.">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,46 +12,60 @@
 </head>
 
 <body>
-    <img id="homeImage" src="https://picsum.photos/1000/400" alt="main image">
+<img id="homeImage" src="https://picsum.photos/1000/400" alt="main image">
 
-    <div id="topMenu">
-        <ul id="topMenuList">
-            <li class="topMenuItem" onclick="showNoticePage()">
-                공지사항
-            </li>
-            <li class="topMenuItem" onclick="showUnreadMailsPage()">
-                안 읽은 메일
-            </li>
-        </ul>
-        <button id="loginButton">
-            로그인하세요
+<div id="topMenu">
+    <ul id="topMenuList">
+        <li class="topMenuItem" onclick="showNoticePage()">
+            공지사항
+        </li>
+        <li class="topMenuItem" onclick="showUnreadMailsPage()">
+            안 읽은 메일
+        </li>
+    </ul>
+    <button id="loginButton">
+        로그인하세요
+    </button>
+
+    <div id="dropdown">
+        <button id="profileImage" onclick="toggleProfileImage()">
+            <ul id="profileImage_content" class="dropdown_content">
+                <li>김경오 사원</li>
+                <li onclick="showUserProfilePage()">마이페이지</li>
+                <li>로그아웃</li>
+            </ul>
         </button>
-
-        <div id="dropdown">
-            <button id="profileImage" onclick="toggleProfileImage()">
-                <ul id="profileImage_content" class="dropdown_content">
-                    <li>김경오 사원</li>
-                    <li onclick="showUserProfilePage()">마이페이지</li>
-                    <li>로그아웃</li>
-                </ul>
-            </button>
-        </div>
-
     </div>
 
-    <nav>
-        <ul id="sidebar">
-            <h1><a id="logo" href="#"> OHUB </a></h1>
-            <li><a href="#"> e-mail </a></li>
-            <li><a href="#"> 회의실 예약 </a></li>
-            <li><a href="#"> 출근 현황 </a></li>
-            <li><a href="#"> 조직도 </a></li>
-        </ul>
-    </nav>
+</div>
 
-    <div id="contentContainer">
+<nav>
+    <ul id="sidebar">
+        <h1><a id="logo" href="#"> OHUB </a></h1>
+        <li><a href="#"> e-mail </a></li>
+        <li><a href="#"> 회의실 예약 </a></li>
+        <li><a href="#"> 출근 현황 </a></li>
+        <li><a href="#"> 조직도 </a></li>
+    </ul>
+</nav>
 
+<div id="contentContainer">
+
+</div>
+
+<div id="loginModal">
+    <p>
+        환영합니다.
+    </p>
+    <div id="loginFormContainer">
+        <form id="loginForm">
+            <input id="emailInput" type="text" placeholder="이메일"/>
+            <input id="passwordInput" type="text" placeholder="비밀번호"/>
+        </form>
     </div>
+    <button id="cancelLoginButton">닫기</button>
+    <button id="requestLoginButton">확인</button>
+</div>
 </body>
 
 </html>
