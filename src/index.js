@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
 function showNoticePage() {
     findContentContainer().innerHTML =
         `<object type="text/html" data="notice.html"></object>`;
-}
 
 function showUnreadMailsPage() {
     findContentContainer().innerHTML =
@@ -33,7 +32,6 @@ function showLoginModal() {
         loginModal.style.display = "block";
     }, false);
     loginModal.className = "loginFadeIn";
-
     loginButton.onclick = function () {
         alert("로그인 기능 구현이 필요합니다.");ㅓㅓㅓ
     }
