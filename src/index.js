@@ -1,22 +1,52 @@
+document.addEventListener("DOMContentLoaded", function() {
+    showNoticePage();
+
+    document.getElementById("loginButton").onclick = function (ev) {
+        console.log("login clicked");
+        showLoginModal();
+    };
+});
+
 function showNoticePage() {
-    document.getElementById("contentContainer").innerHTML = '<object type="text/html" data="notice.html" style="width:700px; height:900px;"></object>';
-}
+    findContentContainer().innerHTML =
+        `<object type="text/html" data="notice.html"></object>`;
 
 function showUnreadMailsPage() {
-    document.getElementById("contentContainer").innerHTML = '<object type="text/html" data="unread_mails.html"></object>';
+    findContentContainer().innerHTML =
+        '<object type="text/html" data="unread_mails.html"></object>';
 }
 
 function showUserProfilePage() {
-    document.getElementById("contentContainer").innerHTML = '<object id="userProfileHtml" type="text/html" data="user_profile.html"></object>';
+    findContentContainer().innerHTML =
+        '<object id="userProfileHtml" type="text/html" data="user_profile.html"></object>';
 }
 
-// 맨 처음 로딩시에는 공지사항 화면을 표시해야하는데, 해당 div는 처음의 html이 모두 로딩되었어야 조회 가능
-document.addEventListener("DOMContentLoaded", function () {
-    showNoticePage();
-});
+function showLoginModal() {
+    let loginModal = document.getElementById("loginModal");
+    let closeButton = document.getElementById("cancelLoginButton");
+    let loginButton = document.getElementById("requestLoginButton");
 
+    loginModal.removeEventListener("animationend", () => {}, false);
+    loginModal.style.display = "block";
+    loginModal.addEventListener("animationend", _ => {
+        loginModal.style.display = "block";
+    }, false);
+    loginModal.className = "loginFadeIn";
+    loginButton.onclick = function () {
+        alert("로그인 기능 구현이 필요합니다.");ㅓㅓㅓ
+    }
 
-var showClassName = "show";
+    closeButton.onclick = function () {
+        loginModal.addEventListener("animationend", _ => {
+            loginModal.style.display = "none";
+        }, false);
+        loginModal.className = "loginFadeOut";
+    }
+}
+
+function findContentContainer() {
+    return document.getElementById("contentContainer");
+}
 
 function toggleProfileImage() {
     document.getElementById("profileImage_content").classList.toggle(showClassName);
@@ -24,9 +54,9 @@ function toggleProfileImage() {
 
 window.onclick = event => {
     if (!event.target.matches('#profileImage')) {
-        var dropdowns = document.getElementsByClassName("dropdown_content");
+        const dropdowns = document.getElementsByClassName("dropdown_content");
         Array.from(dropdowns).forEach(dropdown => {
-            dropdown.classList.remove(showClassName);
+            dropdown.classList.remove("show");
         });
     }
 }
