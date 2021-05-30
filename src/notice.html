@@ -14,12 +14,11 @@
 
 </head>
 
-<!-- <script>
+<script>
 	fetch("http://13.125.35.33:8080/notices", {
-		method:"get",	//put,delete, get은 디폴트 
+		method:"get",
 		headers: {
-		// "Content-Type": "application/json",
-		// "credentials": "include"
+		"Content-Type": "application/json"
 		}
 	}).then((response) => {
 		return response.json();
@@ -31,7 +30,7 @@
 			console.log(item,index);
 		})
 	})
-</script> -->
+</script> 
 <body>
 	<div id="noticeShow"></div>
 </body>
