@@ -1,16 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    showNoticePage();
+import { requestLogin as login, registerUser, requestLogin }
+from "./repository/user_data_repository.js";
 
-    document.getElementById("loginButton").onclick = function (ev) {
-        console.log("login clicked");
-        showLoginModal();
-    };
-});
+document.getElementById("loginButton").onclick = function() {
+    showLoginModal();
+};
 
-function showNoticePage() {
-    findContentContainer().innerHTML =
-        `<object type="text/html" data="notice.html"></object>`;
-}
+document.getElementById("registerButton").onclick = function() {
+    onRegisterClick();
+};
 
 function showUnreadMailsPage() {
     findContentContainer().innerHTML =
@@ -34,16 +31,54 @@ function showLoginModal() {
     }, false);
     loginModal.className = "loginFadeIn";
 
-    loginButton.onclick = function () {
-        alert("로그인 기능 구현이 필요합니다.");ㅓㅓㅓ
+    loginButton.onclick = async function() {
+        const emailInput = document.getElementById("emailInput").value;
+        const passwordInput = document.getElementById("passwordInput").value;
+        try {
+            document.getElementById("loginModalProgress").style.visibility = "visible";
+            await requestLogin(emailInput, passwordInput);
+            console.log("login done");
+        } catch (e) {
+            document.getElementById("loginModalProgress").style.visibility = "hidden";
+            console.log(e);
+            alert("로그인에 실패했습니다. 관리자에게 문의하세요.")
+        } finally {
+            document.getElementById("loginModalProgress").style.visibility = "hidden";
+        }
     }
 
-    closeButton.onclick = function () {
+    closeButton.onclick = function() {
         loginModal.addEventListener("animationend", _ => {
             loginModal.style.display = "none";
         }, false);
         loginModal.className = "loginFadeOut";
     }
+}
+
+function onRegisterClick() {
+    const emailInput = document.getElementById("emailInput").value;
+    const passwordInput = document.getElementById("passwordInput").value;
+
+    const isValid = validateEmailAndPassword(emailInput, passwordInput);
+
+    if (isValid) {
+        try {
+            registerUser(emailInput.innerHTML.value);
+        } catch (error) {
+            alert("일시적인 오류가 발생했습니다.");
+            console.log(error);
+        }
+    }
+}
+
+function validateEmailAndPassword(email, password) {
+
+    if (password.length < 8) {
+        alert("비밀번호 길이가 너무 짧습니다. 8글자 이상으로 설정해주세요.")
+        return false;
+    }
+
+    return true;
 }
 
 function findContentContainer() {
