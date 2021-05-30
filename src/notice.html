@@ -8,31 +8,9 @@
 	<meta charset="UTF-8">
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<link rel="stylesheet" href="notice.css" type="text/css">
-	<script type="module" src="./notice/notice.js"> 
-
-	</script>
-
+	<script type="module" src="./notice/notice.js"></script>
 </head>
-
-<script>
-	fetch("http://13.125.35.33:8080/notices", {
-		method:"get",
-		headers: {
-		"Content-Type": "application/json"
-		}
-	}).then((response) => {
-		return response.json();
-	}).then(result => {
-		console.log(result);
-		console.log(result.response.title);
-		console.log(result.response.content);
-		array.forEach( (item,index,noticeList) => {
-			console.log(item,index);
-		})
-	})
-</script> 
 <body>
 	<div id="noticeShow"></div>
 </body>
-
 </html>

@@ -12,7 +12,7 @@ document.getElementById("registerButton").onclick = function() {
 function showNoticePage() {
     findContentContainer().innerHTML =
         `<object type="text/html" data="notice.html"></object>`;
-
+}
 function showUnreadMailsPage() {
     findContentContainer().innerHTML =
         '<object type="text/html" data="unread_mails.html"></object>';
