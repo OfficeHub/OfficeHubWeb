@@ -1,4 +1,4 @@
-[
+export const data = [
     {
         "title": "테스트중입니다.",
         "day": "2016-03-24"
