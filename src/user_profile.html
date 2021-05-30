@@ -13,22 +13,22 @@
 </head>
 
 <body>
-<div id="userProfilePage">
-    <img id="profileImage" src="https://picsum.photos/200/200" alt="user profile">
-    <p id="userName" onclick="fetchUserData()">변지민</p>
-    <p id="userDescription">클라이언트 개발자입니다.</p>
+    <div id="userProfilePage">
+        <img id="profileImage" src="https://picsum.photos/200/200" alt="user profile">
+        <p id="userName">변지민</p>
+        <p id="userDescription">클라이언트 개발자입니다.</p>
 
-    <div id="departmentInfo">
-        <p id="departmentLabel">부서정보</p>
-        <p id="departmentName">앱 개발팀</p>
+        <div id="departmentInfo">
+            <p id="departmentLabel">부서정보</p>
+            <p id="departmentName">앱 개발팀</p>
+        </div>
+        <div id="contactInfo">
+            <p id="phoneNumberLabel">전화번호</p>
+            <p id="phoneNumber">010-1234-5678</p>
+        </div>
+        <button id="editProfileButton" onclick="showEditProfilePopup()">프로필 수정</button>
+        <button id="logoutButton" onclick="toggleLogin()">로그아웃</button>
     </div>
-    <div id="contactInfo">
-        <p id="phoneNumberLabel">전화번호</p>
-        <p id="phoneNumber">010-1234-5678</p>
-    </div>
-    <button id="editProfileButton" onclick="showEditProfilePopup()">프로필 수정</button>
-    <button id="logoutButton" onclick="toggleLogin()">로그아웃</button>
-</div>
 </body>
 
 </html>
