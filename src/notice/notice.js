@@ -25,8 +25,7 @@ function fetchNotices() {
 	}).then(() => {
 		const noticeContainers = document.querySelectorAll(".notice-container");
 		for (let i = 0; i < noticeContainers.length; i++) {
-			noticeContainers[i].addEventListener("click", async () => {
-				await handleNoticeClick();
+			noticeContainers[i].addEventListener("click", () => {
 				noticeContainers[i].style.backgroundColor = '#ccc';
 				const checkNotice = noticeContainers[i].querySelector(".check");
 				checkNotice.innerText = "확인";
