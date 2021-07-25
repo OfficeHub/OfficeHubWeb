@@ -1,4 +1,4 @@
-export function noticeTemplate(data) { 
+export function noticeTemplate(data) {
     return `
     <div class='notice-container'>
     <span class='check'>미확인</span>

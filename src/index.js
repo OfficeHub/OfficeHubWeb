@@ -1,17 +1,17 @@
 import { requestLogin as login, registerUser, requestLogin }
-from "./repository/user_data_repository.js";
+    from "./repository/user_data_repository.js";
 
-document.getElementById("loginButton").onclick = function() {
+document.getElementById("loginButton").onclick = function () {
     showLoginModal();
 };
 
-document.getElementById("registerButton").onclick = function() {
+document.getElementById("registerButton").onclick = function () {
     onRegisterClick();
 };
 
 function showNoticePage() {
     findContentContainer().innerHTML =
-        `<object type="text/html" data="notice.html"></object>`;
+        `<object class='fit-screen-size' type="text/html" data="notice.html"></object>`;
 }
 function showUnreadMailsPage() {
     findContentContainer().innerHTML =
@@ -28,14 +28,14 @@ function showLoginModal() {
     let closeButton = document.getElementById("cancelLoginButton");
     let loginButton = document.getElementById("requestLoginButton");
 
-    loginModal.removeEventListener("animationend", () => {}, false);
+    loginModal.removeEventListener("animationend", () => { }, false);
     loginModal.style.display = "block";
     loginModal.addEventListener("animationend", _ => {
         loginModal.style.display = "block";
     }, false);
     loginModal.className = "loginFadeIn";
 
-    loginButton.onclick = async function() {
+    loginButton.onclick = async function () {
         const emailInput = document.getElementById("emailInput").value;
         const passwordInput = document.getElementById("passwordInput").value;
         try {
@@ -51,7 +51,7 @@ function showLoginModal() {
         }
     }
 
-    closeButton.onclick = function() {
+    closeButton.onclick = function () {
         loginModal.addEventListener("animationend", _ => {
             loginModal.style.display = "none";
         }, false);
@@ -101,3 +101,5 @@ window.onclick = event => {
         });
     }
 }
+
+window.addEventListener('load', showNoticePage);
